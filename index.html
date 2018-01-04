@@ -5,7 +5,7 @@
 </head>
 <body>
 	<div id="hanoiTower">
-		请输入汉诺塔的盘子数量
+		请输入汉诺塔的盘子数量(最大40)：
 		<input type="text" value="5">
 		<button type="button">生成答案</button>
 		<div></div>
@@ -20,9 +20,14 @@
 
 	button.addEventListener('click',function () {
 		var number =  parseInt(input.value);
-		let tower = new Tower(number);
-		tower.moveDisks('a','c','b');
-		div.innerHTML = tower.moveRecorde;
+		if(number > 40){
+			alert("数字太大！");
+		}else{
+			var tower = new Tower(number);
+			tower.moveDisks('a','c','b');
+			div.innerHTML = tower.moveRecorde;
+		}
+
 	});
 	
 </script>
