@@ -63,8 +63,3 @@ class Tower{
 		return this.poles['a'].isEmpty() && this.poles['b'].isEmpty();
 	}
 }
-let tower = new Tower(10);
-console.log(tower);
-tower.moveDisks('a','c','b');
-console.log(tower.moveRecorde);
-

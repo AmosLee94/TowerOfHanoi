@@ -4,7 +4,26 @@
 	<title>汉诺塔</title>
 </head>
 <body>
-
+	<div id="hanoiTower">
+		请输入汉诺塔的盘子数量
+		<input type="text" value="5">
+		<button type="button">生成答案</button>
+		<div></div>
+	</div>
 </body>
 <script type="text/javascript" charset="utf-8" src="js/towerOfHanoi.js"></script>
+<script type="text/javascript">
+	var hanoiTower = document.getElementById('hanoiTower');
+	var input = hanoiTower.getElementsByTagName('input')[0]; 
+	var button = hanoiTower.getElementsByTagName('button')[0];
+	var div = hanoiTower.getElementsByTagName('div')[0];
+
+	button.addEventListener('click',function () {
+		var number =  parseInt(input.value);
+		let tower = new Tower(number);
+		tower.moveDisks('a','c','b');
+		div.innerHTML = tower.moveRecorde;
+	});
+	
+</script>
 </html>

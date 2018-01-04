@@ -69,8 +69,4 @@ var Tower = /** @class */ (function () {
     };
     return Tower;
 }());
-var tower = new Tower(10);
-console.log(tower);
-tower.moveDisks('a', 'c', 'b');
-console.log(tower.moveRecorde);
 //# sourceMappingURL=towerOfHanoi.js.map
